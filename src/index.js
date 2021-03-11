@@ -23,7 +23,7 @@ module.exports = function toReadable (number) {
       return result;
     }
     else if (number - (parseInt(string[0]))*100 < 20){
-      result = result + " " + first[parseInt(string[1]) + string[2]];
+      result = result + " " + first[parseInt(string[1] + string[2])];
     }
     else {
       result = result + " " + second[parseInt(string[1])] + " " + first[parseInt(string[2])];
