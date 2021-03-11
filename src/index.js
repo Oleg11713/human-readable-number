@@ -25,17 +25,16 @@ module.exports = function toReadable (number) {
     else if (number - (parseInt(string[0]))*100 < 20){
       result = result + " " + first[parseInt(string[1] + string[2])];
     }
-    else if (number - (parseInt(string[0]))*100 % 10 == 0){
+    else if ((number - (parseInt(string[0]))*100) % 10 == 0){
       result = result + " " + second[parseInt(string[1])];
     }
     else {
       result = result + " " + second[parseInt(string[1])] + " " + first[parseInt(string[2])];
     }
-    return result;
   }
 
   else{
     result = second[parseInt(string[0])] + " " + first[parseInt(string[1])];
-    return result;
   }
+  return result;
 }
